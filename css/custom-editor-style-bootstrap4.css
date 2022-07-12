@@ -117,12 +117,12 @@ sup {
 }
 
 a {
-  color: #5533ff;
+  color: #333333;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #2600e6;
+  color: #0d0d0d;
   text-decoration: underline;
 }
 
@@ -329,7 +329,7 @@ template {
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #5533ff;
+  --primary: #333333;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -404,21 +404,21 @@ template {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #cfc6ff;
+  background-color: #c6c6c6;
 }
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #a795ff;
+  border-color: #959595;
 }
 
 .table-hover .table-primary:hover {
-  background-color: #baadff;
+  background-color: #b9b9b9;
 }
 .table-hover .table-primary:hover > td,
 .table-hover .table-primary:hover > th {
-  background-color: #baadff;
+  background-color: #b9b9b9;
 }
 
 .table-secondary,
@@ -935,12 +935,12 @@ mark,
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #5533ff;
+  color: #333333;
 }
 
 .has-primary-background-color {
-  background-color: #5533ff;
-  border-color: #5533ff;
+  background-color: #333333;
+  border-color: #333333;
 }
 
 .has-secondary-color,
