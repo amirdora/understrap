@@ -43,3 +43,55 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+	/* Register the sidebar. */
+	register_sidebar(
+		array(
+			'id'            => 'footer-top-left',
+			'name'          => __( 'Footer Top Left' ),
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	/* Repeat register_sidebar() code for additional sidebars. */
+	register_sidebar(
+		array(
+			'id'            => 'footer-top-right',
+			'name'          => __( 'Footer Top Right' ),
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'footer-bottom-left',
+			'name'          => __( 'Footer Bottom Left' ),
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'id'            => 'footer-bottom-right',
+			'name'          => __( 'Footer Bottom Right' ),
+			'description'   => __( 'A short description of the sidebar.' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+}
