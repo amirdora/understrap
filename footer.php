@@ -32,7 +32,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php endif; ?>
 					</div>
 
-					<div id="sidebar-footer" class="sidebar-footer  col-md-10 text-white">
+					<div id="sidebar-footer footer-top-right" class="sidebar-footer pull-right  col-md-10 text-white">
 						<?php if (is_active_sidebar('footer-top-right')) : ?>
 							<?php dynamic_sidebar('footer-top-right'); ?>
 						<?php else : ?>
