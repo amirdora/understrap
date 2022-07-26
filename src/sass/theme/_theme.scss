@@ -1,68 +1,110 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+//Body
+body {
+  font-family: segoe ui, Arial;
+}
+
 //Nav Bar
-.navbar{
+.navbar {
   height: 80px !important;
   border-bottom: 1px solid;
   border-color: #ccc;
 }
-.header-logo-img{
+
+.header-logo-img {
   margin-left: 2%;
 }
-.site-footer{
+
+.site-footer {
   min-height: 460px;
   background: black;
 }
+
 ul#main-menu li {
-  padding-left: 64px !important;
+  margin-left: 64px !important;
 }
+
 ul#main-menu {
   padding-left: 16px !important;
 }
-.navbar-nav a{
+
+.navbar-nav a {
   color: #333333 !important;
 }
-.dropdown-toggle::before {
-  //content: "\E612";
+
+.navbar-nav .dropdown-menu {
+  margin: 0 !important;
+}
+
+.navbar-nav .menu-item-has-children:hover .dropdown-menu {
+  display: block;
+}
+//Max Mega Menu plugin
+#mega-menu-wrap-primary {
+  width: 100%;
+}
+.mega-sub-menu{
+  width: 100% !important;
 }
 //Footer
-.footer-wrapper{
+.footer-wrapper {
   padding-top: 30px;
 }
+
 ul.menu {
   list-style-type: none;
   margin-left: -40px;
 }
-.footer-top{
-  padding: 64px 92px 0 92px;
+
+.footer-top {
+  padding: 64px 8% 64px 8%;
 }
-.footer-bottom{
+
+.footer-top .sidebar-footer-right {
+  padding-left: 64px;
+}
+
+.footer-bottom {
   border-top: 1px solid #3c3c42;
   padding: 32px 92px 0 92px;
 }
-.footer-top a{
+
+.footer-top a {
   color: white !important;
-}.footer-bottom a{
+}
+
+.footer-bottom a {
   color: #606060 !important;
 }
+
+.footer-top .menu-item {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
 .wp-block-search__button {
   background: #f7f7f7;
 }
-#footer-top-right{
+
+#footer-top-right {
 
 }
-.copyright-text{
+
+.copyright-text {
   color: #606060;
   margin-top: 0;
   text-align: left;
 }
-.copyright-a{
+
+.copyright-a {
   color: #606060;
   margin-top: 16px;
   text-align: left;
 }
+
 //Grid Item
-.home .wp-block-query .wp-block-post-template{
+.home .wp-block-query .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
@@ -70,9 +112,10 @@ ul.menu {
 
 @media (min-width: 1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
-	max-width: 1240px;
+	max-width: 80%;
   }
 }
+
 //Slider
 .wp-block-image img {
   width: 100% !important;
