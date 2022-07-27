@@ -4,12 +4,18 @@
 body {
   font-family: segoe ui, Arial;
 }
+#full-width-page-wrapper{
+  background-image: url("http://new.dahuasecurity.de/wp-content/uploads/2022/07/dahua_blue_wave.png");
+  background-repeat: repeat;
+  background-position: left top;
+}
 
 //Nav Bar
 .navbar {
   height: 80px !important;
   border-bottom: 1px solid;
   border-color: #ccc;
+  box-shadow: 2px 2px 8px -2px #BEBEBE;
 }
 
 .header-logo-img {
@@ -47,6 +53,21 @@ ul#main-menu {
 .mega-sub-menu{
   width: 100% !important;
 }
+#mega-menu-wrap-primary .mega-menu-toggle {
+  width: 60px;
+  height: 60px;
+  float: right;
+  margin-top: -60px;
+}
+@media only screen and (max-width: 768px) {
+  #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
+	position: fixed !important;
+	left: 0 !important;
+  }
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+  width: 100vw !important;
+}
 //Footer
 .footer-wrapper {
   padding-top: 30px;
@@ -58,7 +79,11 @@ ul.menu {
 }
 
 .footer-top {
-  padding: 64px 8% 64px 8%;
+  padding: 64px 4% 64px 4%;
+}
+
+.footer-top .sidebar-footer-left {
+  margin-bottom: 32px;
 }
 
 .footer-top .sidebar-footer-right {
@@ -67,7 +92,12 @@ ul.menu {
 
 .footer-bottom {
   border-top: 1px solid #3c3c42;
-  padding: 32px 92px 0 92px;
+  padding: 32px 4% 0 4%;
+}
+@media only screen and (min-width: 768px) {
+  .footer-bottom {
+	padding: 32px 4% 0 4%;
+  }
 }
 
 .footer-top a {
@@ -103,7 +133,7 @@ ul.menu {
   text-align: left;
 }
 
-//Grid Item
+//Grid Item; News
 .home .news-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -132,15 +162,34 @@ ul.menu {
 }
 .news-grid .wp-block-group__inner-container{
   width: 100% !important;
+  background-color: white;
   display: inline-flex;
   justify-content: space-between;
 }
 .news-grid .wp-block-post-featured-image {
   margin: 0;
 }
+//Grid Item; Products
+.products-grid .wp-block-column{
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+}
+.products-grid h6{
+  padding: 8px 16px;
+  background-color: white;
+}
+.products-grid .wp-block-image{
+  padding: 4px 16px;
+  margin: 0;
+}
+.products-grid .wp-block-group__inner-container{
+  width: 100% !important;
+  background-color: white;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
 //Slider
 .wp-block-image img {
   width: 100% !important;
 }
-
-
