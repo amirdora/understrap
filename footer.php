@@ -24,7 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 			<footer class="site-footer" id="colophon">
 
 				<div class="row footer-top">
-					<div id="sidebar-footer" class="sidebar-footer sidebar-footer-left  col-md-2 text-white">
+					<div id="sidebar-footer" class="sidebar-footer sidebar-footer-left pull-right  col-md-3 text-white">
 						<?php if (is_active_sidebar('footer-top-left')) : ?>
 							<?php dynamic_sidebar('footer-top-left'); ?>
 						<?php else : ?>
@@ -32,7 +32,8 @@ $container = get_theme_mod('understrap_container_type');
 						<?php endif; ?>
 					</div>
 
-					<div id="sidebar-footer footer-top-right" class="sidebar-footer sidebar-footer-right pull-right  col-md-10 text-white">
+					<div id="sidebar-footer footer-top-right"
+						 class="sidebar-footer sidebar-footer-right pull-right col-md-9 text-white">
 						<?php if (is_active_sidebar('footer-top-right')) : ?>
 							<?php dynamic_sidebar('footer-top-right'); ?>
 						<?php else : ?>
