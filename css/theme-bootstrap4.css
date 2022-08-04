@@ -16028,14 +16028,40 @@ body {
   background-position: left top;
 }
 
-.navbar {
-  height: 80px !important;
-  border-bottom: 1px solid;
-  border-color: #ccc;
-  box-shadow: 2px 2px 8px -2px #BEBEBE;
-  padding: 0.5rem 0 0 0.5rem !important;
+#right-sidebar {
+  left: 32px;
 }
 
+.widget-area .wp-block-latest-posts {
+  padding-left: 32px;
+  list-style: circle !important;
+}
+
+.type-post .entry-meta {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  color: #666;
+}
+
+.entry-content p {
+  color: #666;
+}
+
+.entry-content p a {
+  color: #0e5fac;
+}
+
+.navbar {
+  height: 80px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1030;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 60px !important;
+  }
+}
 .header-logo-img {
   margin-left: 2%;
 }
@@ -16078,17 +16104,22 @@ ul#main-menu {
   height: 80px;
   float: right;
   margin-top: -50px;
+  margin-right: -16px;
 }
 
+@media only screen and (max-width: 768px) {
+  #mega-menu-wrap-primary .mega-menu-toggle {
+    height: 60px;
+  }
+}
 #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right {
   margin-right: 16px;
 }
 
 @media only screen and (max-width: 768px) {
   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
-    position: fixed !important;
-    left: 0 !important;
-    margin-top: 20px;
+    left: -16px !important;
+    margin-top: 8px;
   }
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -16180,16 +16211,17 @@ ul.menu {
   color: #fff;
   background-color: #37A9D1;
   border: none;
+  font-size: 12px;
 }
 
 .sidebar-footer-left input {
   height: calc(1.5em + 0.75rem + 2px);
-  width: 14vw !important;
+  width: 12vw !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
-  background-color: #000;
+  background-color: transparent;
   background-clip: padding-box;
   border: none;
   outline: none;
@@ -16198,12 +16230,25 @@ ul.menu {
 .sidebar-footer-left input:focus {
   outline: none;
   border: none;
-  background-color: black;
+  background-color: transparent;
   color: white;
 }
 
 .sidebar-footer-left form {
-  padding: 4px;
+  height: 44px;
+  max-width: 360px;
+  position: relative;
+  padding-right: 4px;
+  border: 1px solid #3c3c42;
+}
+
+.newsletter-text {
+  color: #606060;
+  margin-top: 16px;
+}
+
+.sidebar-footer-right h6 {
+  color: #606060;
 }
 
 .home .news-grid .wp-block-post-template {
@@ -16222,13 +16267,21 @@ ul.menu {
 }
 
 .news-grid .wp-block-post-title {
-  padding: 8px 16px;
+  padding: 8px 0 0 16px;
   background-color: white;
+}
+
+.news-grid .wp-block-post-title a {
+  max-width: 272px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .news-grid .wp-block-image {
   padding: 4px 16px;
   margin: 0;
+  float: right;
 }
 
 .news-grid .wp-block-post-title a {
@@ -16277,6 +16330,10 @@ ul.menu {
   justify-content: space-between;
 }
 
+/*.products-grid .wp-block-image:hover + .wp-block-group__inner-container{
+	background-color: #0e5fac!important;
+	color: white;
+}*/
 .wp-block-image img {
   width: 100% !important;
 }

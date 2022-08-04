@@ -43,7 +43,7 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 
 				<div class="row footer-bottom">
-					<div id="sidebar-footer" class="sidebar-footer  col-md-9 text-white">
+					<div id="sidebar-footer" class="sidebar-footer  col-md-8 text-white">
 						<?php if (is_active_sidebar('footer-bottom-left')) : ?>
 							<?php dynamic_sidebar('footer-bottom-left'); ?>
 						<?php else : ?>
@@ -51,7 +51,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php endif; ?>
 					</div>
 
-					<div id="sidebar-footer" class="sidebar-footer  col-md-3 text-white">
+					<div id="sidebar-footer" class="sidebar-footer  col-md-4 text-white">
 						<?php if (is_active_sidebar('footer-bottom-right')) : ?>
 							<?php dynamic_sidebar('footer-bottom-right'); ?>
 						<?php else : ?>
@@ -76,4 +76,3 @@ $container = get_theme_mod('understrap_container_type');
 </body>
 
 </html>
-
