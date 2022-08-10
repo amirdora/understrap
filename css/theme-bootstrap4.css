@@ -16043,12 +16043,14 @@ body {
   color: #666;
 }
 
-.entry-content p {
-  color: #666;
-}
-
 .entry-content p a {
   color: #0e5fac;
+}
+
+.entry-content .wp-block-embed__wrapper {
+  max-width: 560px;
+  max-height: 315px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -16289,6 +16291,7 @@ ul.menu {
 
 .display-grid .wp-block-column {
   box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
   max-width: 500px;
 }
 
@@ -16347,7 +16350,7 @@ ul.menu {
   margin: 0;
 }
 
-.home .products-grid .wp-block-post-template {
+.products-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 25px;
@@ -16491,6 +16494,43 @@ ul.menu {
 
 .webinar-grid .showContent {
   height: auto;
+}
+
+.site .training-grid .wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+  grid-gap: 40px;
+}
+
+.training-grid .wp-block-post {
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+  padding: 8px 16px 0 16px;
+  border-radius: 2%;
+}
+
+.training-grid .wp-block-post-date {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.training-grid .date-icon {
+  padding: 8px 0;
+}
+
+.training-grid .wp-block-post-featured-image {
+  margin: 0;
+}
+
+.training-grid .wp-block-post-title {
+  color: #606060;
+  margin: 1rem 0;
+}
+
+.training-grid .wp-block-button a:hover {
+  color: white !important;
 }
 
 .type-webinar .wp-block-columns, .type-training_course .wp-block-columns {
