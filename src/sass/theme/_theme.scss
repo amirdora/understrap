@@ -90,7 +90,7 @@ ul#main-menu {
   }
 }
 #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right {
-  margin-right: 16px;
+  //margin-right: 16px;
 }
 @media only screen and (max-width: 768px) {
   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
@@ -134,6 +134,12 @@ ul.menu {
   border-top: 1px solid #3c3c42;
   padding: 32px 4% 0 4%;
 }
+.footer-wrapper .row{
+  margin-right: 0 !important;
+}
+.footer-wrapper .col-wrapper{
+  padding-right: 0 !important;
+}
 @media only screen and (min-width: 768px) {
   .footer-bottom {
 	padding: 32px 4% 0 4%;
@@ -147,6 +153,14 @@ ul.menu {
 
 .footer-bottom a {
   color: #606060 !important;
+}
+.footer-bottom .icon-img {
+  width: 40px !important;
+}
+@media only screen and (min-width: 768px) {
+  .footer-bottom .icon-img {
+	width: 30px !important;
+  }
 }
 
 .footer-top .menu-item {
@@ -177,10 +191,7 @@ ul.menu {
   margin-top: 16px;
   text-align: left;
 }
-.sidebar-footer-left .mb-2 {
-  margin-bottom: 0!important;
-}
-.sidebar-footer-left .ml-sm-3, .mx-sm-3 {
+.sidebar-footer-left .newsletter-input {
   margin-left: 0!important;
 }
 .sidebar-footer-left .btn{
@@ -189,10 +200,17 @@ ul.menu {
   background-color: #37A9D1;
   border: none;
   font-size: 12px;
+  margin-bottom: 0!important;
+  position: absolute;
+  right: 0;
+  margin-right: 6px;
 }
 .sidebar-footer-left input{
   height: calc(1.5em + 0.75rem + 2px);
-  width: 12vw !important;
+  width: 100% !important;
+  min-width: 200px;
+  margin-bottom: 0!important;
+  position: relative;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -202,6 +220,11 @@ ul.menu {
   border: none;
   outline: none;
   //transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar-footer-left input {
+	min-width: 60%;
+  }
 }
 .sidebar-footer-left input:focus{
   outline: none;
@@ -223,19 +246,40 @@ ul.menu {
 .sidebar-footer-right h6{
   color: #606060;
 }
+//Grid Item Generic
+@media (min-width: 1300px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+	max-width: 80%;
+  }
+}
+.display-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 3em !important;
+  text-align: center;
+  justify-content: center;
+}
+.display-grid .wp-block-column{
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+  max-width: 500px;
+}
+.display-grid .wp-block-column img{
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 300px;
+}
+@media (min-width: 768px) {
+  .display-grid .wp-block-column img{
 
-
+  }
+}
 //Grid Item; News
 .home .news-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
-}
-
-@media (min-width: 1300px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-	max-width: 80%;
-  }
 }
 .news-grid .wp-block-post{
   box-shadow: 2px 2px 8px #BEBEBE;
@@ -268,16 +312,71 @@ ul.menu {
 .news-grid .wp-block-post-featured-image {
   margin: 0;
 }
-//Grid Item; Products
+//Grid Item; Products [Dynamic]
+.home .products-grid .wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 25px;
+}
+.products-grid .wp-block-post{
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+}
+.products-grid .wp-block-post-title{
+  padding: 8px 0 0 16px;
+  background-color: white;
+  margin-bottom: 0 !important;
+}
+.products-grid .wp-block-post-title a{
+  max-width: 272px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.products-grid .wp-block-image{
+  padding: 4px 16px 0 16px;
+  margin: 0;
+  float: right;
+}
+.products-grid .wp-block-image .alignright {
+  float: right;
+  margin: 0.5em 0 0 1em !important;
+}
+.products-grid .wp-block-post-title a{
+  text-decoration: none;
+  color: #333333;
+}
+.products-grid .wp-block-group__inner-container{
+  width: 100% !important;
+  background-color: white;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.products-grid .wp-block-post-featured-image {
+  margin: 0;
+}
+.products-grid a:hover .wp-block-group__inner-container{
+  background-color: #0e5fac!important;
+}
+.products-grid a:hover .wp-block-post-title{
+  color: white;
+  background-color: #0e5fac!important;
+}
+.products-grid a:hover .wp-block-image img{
+  filter: brightness(0) invert(1);
+}
+
+//Grid Item; Products [Static]
 .products-grid .wp-block-column{
   box-shadow: 2px 2px 8px #BEBEBE;
   background-color: white;
 }
-.products-grid h6{
+.products-grid h6, .products-grid h2{
   padding: 8px 16px;
   background-color: white;
+  font-size: 16px;
 }
-.products-grid .wp-block-image{
+.products-grid .wp-block-image,.products-grid .wp-block-post-featured-image{
   padding: 4px 16px;
   margin: 0;
 }
@@ -292,8 +391,99 @@ ul.menu {
 	color: white;
 }*/
 
+//Grid Item; Webinar
+.site .webinar-grid .wp-block-post-template {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 40px;
+}
+.webinar-grid .wp-block-post{
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+  padding: 8px 16px 0 16px;
+  border-radius: 2%;
+}
+.webinar-grid .wp-block-post-date{
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px 0;
+  width: 100%;
+}
+.webinar-grid .date-icon{
+  padding: 8px 0;
+}
+.webinar-grid .wp-block-post-featured-image {
+  margin: 0;
+}
+.webinar-grid .wp-block-post-title{
+  color: #606060;
+  margin: 1rem 0;
+}
+
+.webinar-grid .wp-block-button a:hover{
+  color: white !important;
+}
+
+.webinar-grid .hideContent{
+  overflow: hidden;
+  height: 10em;
+}
+
+.webinar-grid .showContent {
+  height: auto;
+}
+
+
+// button style
+.type-webinar .wp-block-columns, .type-training_course .wp-block-columns{
+  margin: 0;
+}
+.type-webinar .wp-block-column, .type-training_course .wp-block-column{
+  z-index: 1;
+  margin-top: 21px!important;
+  padding-bottom: 20px!important;
+  margin-left: -16px;
+  margin-right: -16px;
+  position: static!important;
+  background: #e8e8e8!important;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.webinar-button, .course-button {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.2!important;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0em;
+  border-radius: 3.8em;
+  padding: 0.8em 1.8em;
+  margin-top: -21px!important;
+  background: #e60013;
+  border-color: transparent;
+  color: #ffffff!important;
+  box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
+
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+  transition-property: background,border,box-shadow,color,opacity,transform;
+  transition-duration: 0.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.webinar-button:hover , .course-button:hover{
+  box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
+  background: #c70010;
+  border-color: transparent;
+  color: #ffffff!important;
+}
+
 //Slider
-.wp-block-image img {
+.carousel .wp-block-image img {
   width: 100% !important;
 }
 
@@ -538,4 +728,37 @@ a:hover {
 }
 .header-nav-menu .nav-subitem-list {
   padding-bottom: 36px;
+}
+// Webinar template
+.entry-content .content h5 img, .entry-content .content p img{
+  width: 16px;
+  height: 16px;
+}
+.type-page .entry-content .content h5, .entry-content .content p{
+  margin-top: 32px;
+}
+.type-page .wp-block-group p{
+  margin-top: 0 !important;
+}
+.type-page .wp-block-group img{
+  margin-right: 16px;
+}
+//Ninja Forms
+.nf-before-form-content {
+  display: none;
+}
+.wp-block-columns .nf-form-cont {
+  margin-top: -36px;
+}
+.nf-form-content input[type=button]{
+  background-color: #e60013 !important;
+  border-radius: 30px;
+  width: 50% !important;
+}
+.nf-form-content input[type=button]:hover{
+  background-color: #c70010 !important;
+  color: white !important;
+}
+.checkbox-container.label-right .field-wrap>div {
+  width: auto !important;
 }
