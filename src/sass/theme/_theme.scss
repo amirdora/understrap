@@ -8,8 +8,8 @@ body {
   background-image: url("http://new.dahuasecurity.de/wp-content/uploads/2022/07/dahua_blue_wave.png");
   background-repeat: repeat;
   background-position: left top;
+  min-height: 500px;
 }
-
 #right-sidebar{
   left: 32px;
 }
@@ -31,7 +31,6 @@ body {
 .entry-content .wp-block-embed__wrapper {
   max-width: 560px;
   max-height: 315px;
-  margin: 0 auto;
 }
 //Nav Bar
 .navbar {
@@ -257,14 +256,14 @@ ul.menu {
 	max-width: 80%;
   }
 }
-.display-grid{
+.display-grid, .display-grid .wp-block-post-template{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3em !important;
   text-align: center;
   justify-content: center;
 }
-.display-grid .wp-block-column{
+.display-grid .wp-block-column, .display-grid .wp-block-post{
   box-shadow: 2px 2px 8px #BEBEBE;
   background-color: white;
   max-width: 500px;
@@ -317,7 +316,7 @@ ul.menu {
 .news-grid .wp-block-post-featured-image {
   margin: 0;
 }
-//Grid Item; Products [Dynamic]**
+//Grid Item; Products [Dynamic]
 .products-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -407,11 +406,17 @@ ul.menu {
   background-color: white;
   padding: 8px 16px 0 16px;
   border-radius: 2%;
+  position: relative;
+  min-height: 460px;
 }
-.webinar-grid .wp-block-post-date{
+.webinar-grid .wp-block-post-content{
+  padding-bottom: 64px;
+}
+.webinar-grid .wp-block-group{
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
-  padding: 8px 0;
+  //padding: 8px 0;
+  margin-bottom: 16px;
   width: 100%;
 }
 .webinar-grid .date-icon{
@@ -448,11 +453,13 @@ ul.menu {
   background-color: white;
   padding: 8px 16px 0 16px;
   border-radius: 2%;
+  position: relative;
+  min-height: 460px;
 }
-.training-grid .wp-block-post-date{
+.training-grid .wp-block-group{
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
-  padding: 8px 0;
+  //padding: 8px 0;
   width: 100%;
 }
 .training-grid .date-icon{
@@ -465,7 +472,6 @@ ul.menu {
   color: #606060;
   margin: 1rem 0;
 }
-
 .training-grid .wp-block-button a:hover{
   color: white !important;
 }
@@ -473,13 +479,16 @@ ul.menu {
 // button style
 .type-webinar .wp-block-columns, .type-training_course .wp-block-columns{
   margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .type-webinar .wp-block-column, .type-training_course .wp-block-column{
   z-index: 1;
   margin-top: 21px!important;
   padding-bottom: 20px!important;
   margin-left: -16px;
-  margin-right: -16px;
+  margin-right: 16px;
   position: static!important;
   background: #e8e8e8!important;
   align-items: center;
@@ -511,7 +520,7 @@ ul.menu {
   transition-duration: 0.3s;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.webinar-button:hover , .course-button:hover{
+.webinar-button:hover , .course-button:hover, .wp-block-button:hover .has-background {
   box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
   background: #c70010;
   border-color: transparent;
@@ -797,4 +806,57 @@ a:hover {
 }
 .checkbox-container.label-right .field-wrap>div {
   width: auto !important;
+}
+
+//WP Tabs
+.sp-tab__nav-tabs,.sp-tab__nav-link, .sp-tab__tab-pane{
+  border: none !important;
+}
+.sp-tab__nav-item .sp-tab__active{
+  border-bottom: 3px solid #0e5fac !important;
+}
+.sp-tab__nav-item .sp-tab__active .sp-tab__tab_title{
+  color:  #0e5fac !important;
+}
+//Tabby Tabs
+.responsive-tabs .responsive-tabs__list__item {
+  border: none !important;
+}
+.responsive-tabs .responsive-tabs__panel {
+  border: none !important;
+}
+.responsive-tabs .responsive-tabs__list__item {
+  border-bottom: 3px solid #999 !important;
+}
+.responsive-tabs .responsive-tabs__list__item--active {
+  color: #0e5fac !important;
+  border-bottom: 3px solid #0e5fac !important;
+}
+.responsive-tabs-wrapper{
+  width: 100%;
+}
+.responsive-tabs .wp-block-columns {
+  box-shadow: 2px 2px 8px #BEBEBE;
+  background-color: white;
+  padding: 16px 16px 16px 16px;
+  width: 100%;
+  min-height: 250px;
+  margin-bottom: 16px;
+}
+.responsive-tabs p{
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.responsive-tabs>h4,h5,h6{
+  margin-bottom: 16px;
+}
+.responsive-tabs img{
+  max-width: 450px;
+  max-height: 200px;
+}
+@media (max-width: 767px) {
+  .responsive-tabs .responsive-tabs__heading {
+	margin: 16px 16px 0 16px !important;
+	border: 1px solid #ccc !important;
+  }
 }
