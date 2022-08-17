@@ -16057,6 +16057,15 @@ body {
   padding: 4px 32px !important;
 }
 
+.breadcrumb a {
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+
+.breadcrumb .current-page {
+  margin-left: 8px !important;
+}
+
 .navbar {
   height: 80px !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

@@ -18,6 +18,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="entry-meta">
 
 			<?php // understrap_posted_on(); ?>
+			<?php echo nav_breadcrumb(); ?>
 
 		</div><!-- .entry-meta -->
 

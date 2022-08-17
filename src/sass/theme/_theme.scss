@@ -35,7 +35,14 @@ body {
 .wp-block-button__link{
   padding: 4px 32px !important;
 }
-
+//breadcrumbs
+.breadcrumb a{
+  margin-right: 8px !important;
+  margin-left: 8px !important;
+}
+.breadcrumb .current-page{
+  margin-left: 8px !important;
+}
 //Nav Bar
 .navbar {
   height: 80px !important;
