@@ -13,11 +13,11 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+		<?php // the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<?php // understrap_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 

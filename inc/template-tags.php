@@ -28,7 +28,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 			'understrap_posted_on',
 			sprintf(
 				'<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
-				esc_html_x( 'Posted on', 'post date', 'understrap' ),
+				esc_html_x( '', 'post date', 'understrap' ),
 				esc_url( get_permalink() ),
 				apply_filters( 'understrap_posted_on_time', $time_string )
 			)
@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_posted_on' ) ) {
 				esc_html( get_the_author() )
 			)
 		);
-		echo $posted_on; //. $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<i class="far fa-calendar-alt"></i>'.$posted_on; //. $byline; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
