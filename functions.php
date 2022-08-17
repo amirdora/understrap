@@ -405,6 +405,34 @@ function my_shortcode($atts)
 add_shortcode('product_url_codes', 'my_shortcode');
 //[product_url_code str="first"]
 
+/**
+ * Creates a shortcode that links to other
+ * content on your site.
+ */
+function my_permalink_shortcode($atts) {
+
+	global $post;
+	// Check that $id exists.
+	//$id = intval($atts['id']);
+	$id = $post->ID;
+	if ($id <= 0) { return; }
+
+	// Check that $id has a URL.
+	$url = get_the_permalink();
+	if ($url == '') { return; }
+
+	// Get link option and title.
+	$link = ($atts['link'] == '1') ? true : false;
+
+	// Determine if we create a link.
+	if ($link) {
+		return '<a href="'.$url.'">';
+	} else {
+		return $url;
+	}
+}
+add_shortcode('permalink', 'my_permalink_shortcode');
+//[pl id='123' link='0/1']
 
 //Adding Product taxonomy Category;
 /*function my_taxonomies_product() {

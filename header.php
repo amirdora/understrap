@@ -20,6 +20,18 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+
+	<!--Code for analytics-->
+	<meta name="facebook-domain-verification" content="midwbx244swyq8mkhmf7gm49669u4j" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPXR6E15YG"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-FPXR6E15YG');
+	</script>
 </head>
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>

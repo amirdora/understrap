@@ -16053,6 +16053,10 @@ body {
   max-height: 315px;
 }
 
+.wp-block-button__link {
+  padding: 4px 32px !important;
+}
+
 .navbar {
   height: 80px !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -16101,6 +16105,10 @@ ul#main-menu {
   width: 100% !important;
 }
 
+ul.mega-sub-menu > li.mega-menu-hidden > a.mega-menu-link {
+  display: none !important;
+}
+
 #mega-menu-wrap-primary .mega-menu-toggle {
   width: 52px;
   height: 80px;
@@ -16139,19 +16147,26 @@ ul.menu {
 }
 
 .footer-top {
-  padding: 64px 4% 64px 4%;
+  padding: 64px 4% 16px 4%;
 }
 
 .footer-top .sidebar-footer-left {
   margin-bottom: 32px;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
 }
 
 .footer-top .sidebar-footer-right {
   padding-left: 64px;
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-top {
+    display: -webkit-box;
+  }
+
+  .footer-top:before, .footer-top:after {
+    display: none !important;
+  }
+}
 .footer-bottom {
   border-top: 1px solid #3c3c42;
   padding: 32px 4% 0 4%;
@@ -16176,7 +16191,13 @@ ul.menu {
 }
 
 .footer-bottom a {
-  color: #606060 !important;
+  color: #ffffff !important;
+  font-size: 0.8rem;
+}
+
+.footer-bottom ul.menu {
+  float: left;
+  text-align: left;
 }
 
 .footer-bottom .icon-img {
@@ -16274,11 +16295,32 @@ ul.menu {
   color: #606060;
 }
 
+.footer-contact {
+  margin-bottom: 32px;
+}
+
+.footer-contact .contact-meta strong {
+  margin-left: 8px;
+}
+
+.footer-contact .contact-meta {
+  color: #606060;
+  font-size: 0.9rem;
+}
+
+.footer-contact .contact-url {
+  font-size: 0.9rem;
+}
+
 @media (min-width: 1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 80%;
   }
 }
+.display-grid {
+  margin-bottom: 32px !important;
+}
+
 .display-grid, .display-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -16296,12 +16338,17 @@ ul.menu {
 }
 
 .display-grid .wp-block-column img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  max-height: 300px;
+  width: 460px !important;
+  height: 260px !important;
+  margin-right: 0 !important;
 }
 
+@media (min-width: 768px) {
+  .display-grid .wp-block-column img {
+    width: 100%;
+    height: auto;
+  }
+}
 .home .news-grid .wp-block-post-template {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -16325,9 +16372,18 @@ ul.menu {
 }
 
 .news-grid .wp-block-image {
-  padding: 4px 16px;
+  padding: 4px 0 4px 16px;
   margin: 0;
   float: right;
+}
+
+.news-grid .wp-block-image figure {
+  margin-bottom: 0 !important;
+}
+
+.news-grid .wp-block-image img {
+  width: 16px;
+  height: 16px;
 }
 
 .news-grid .wp-block-post-title a {
@@ -16359,10 +16415,12 @@ ul.menu {
 .products-grid .wp-block-post {
   box-shadow: 2px 2px 8px #BEBEBE;
   background-color: white;
+  max-width: 360px;
+  position: relative;
 }
 
 .products-grid .wp-block-post-title {
-  padding: 8px 0 0 16px;
+  padding: 8px 0 8px 16px;
   background-color: white;
   margin-bottom: 0 !important;
 }
@@ -16378,6 +16436,11 @@ ul.menu {
   padding: 4px 16px 0 16px;
   margin: 0;
   float: right;
+}
+
+.products-grid .wp-block-group .wp-block-image img {
+  width: 16px;
+  height: 16px;
 }
 
 .products-grid .wp-block-image .alignright {
@@ -16430,8 +16493,13 @@ ul.menu {
   font-size: 16px;
 }
 
-.products-grid .wp-block-image, .products-grid .wp-block-post-featured-image {
+.products-grid .wp-block-post-featured-image {
   padding: 4px 16px;
+  margin: 0;
+}
+
+.products-grid .wp-block-image {
+  padding: 4px 8px 4px 16px;
   margin: 0;
 }
 
@@ -16599,7 +16667,7 @@ ul.menu {
   color: #ffffff !important;
 }
 
-.carousel .wp-block-image img {
+.carousel .carousel-item img {
   width: 100% !important;
 }
 
@@ -16627,7 +16695,7 @@ li {
   text-align: -webkit-match-parent;
 }
 
-ol, ul {
+.header-nav-menu ul {
   list-style: none !important;
 }
 
@@ -16962,7 +17030,7 @@ a:hover {
   font-size: 14px;
 }
 
-.responsive-tabs > h4, h5, h6 {
+.responsive-tabs > h4, .responsive-tabs > h5, .responsive-tabs > h6 {
   margin-bottom: 16px;
 }
 
