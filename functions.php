@@ -460,9 +460,16 @@ function nav_breadcrumb() {
 			$thisCat = $cat_obj->term_id;
 			$thisCat = get_category($thisCat);
 			$parentCat = get_category($thisCat->parent);
-			if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
+			if ($thisCat->parent != 0) {
+				//echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
+
+				// hiding category for now
+				//$_breadcrumbs.=(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '))
+			};
+
 			//echo $before . single_cat_title('', false) . $after;
-			$_breadcrumbs.= $before . single_cat_title('', false) . $after;
+			// hiding category for now
+			//$_breadcrumbs.= $before . single_cat_title('', false) . $after;
 
 		} elseif ( is_day() ) {
 			//echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
@@ -492,9 +499,13 @@ function nav_breadcrumb() {
 				$_breadcrumbs.= $before . get_the_title() . $after;
 			} else {
 				$cat = get_the_category(); $cat = $cat[0];
+
+				//Hide category from Breadcrumbs
 				//echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-				$_breadcrumbs.= get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-				// $before . get_the_title() . $after;
+				//$_breadcrumbs.= get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
+				//End Hide category from Breadcrumbs
+
+				//echo $before . get_the_title() . $after;
 				$_breadcrumbs.= $before . get_the_title() . $after;
 			}
 
