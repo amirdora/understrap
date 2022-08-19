@@ -25,6 +25,9 @@ body {
 .entry-content p{
   //color: #666;
 }
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4{
+  word-break: break-word;
+}
 .entry-content p a{
   color: #0e5fac;
 }
@@ -207,9 +210,8 @@ ul.menu {
 #footer-top-right {
 
 }
-
-.form-newsletter input{
-  border: none !important;
+.sidebar-footer-right h6{
+  color: #606060;
 }
 
 .copyright-text {
@@ -223,61 +225,58 @@ ul.menu {
   margin-top: 16px;
   text-align: left;
 }
-.sidebar-footer-left .newsletter-input {
-  margin-left: 0!important;
-}
-.sidebar-footer-left .btn{
-  border-radius: 0;
-  color: #fff;
-  background-color: #37A9D1;
-  border: none;
-  font-size: 12px;
-  margin-bottom: 0!important;
-  position: absolute;
-  right: 0;
-  margin-right: 6px;
-}
-.sidebar-footer-left input{
-  height: calc(1.5em + 0.75rem + 2px);
-  width: 100% !important;
-  min-width: 200px;
-  margin-bottom: 0!important;
-  position: relative;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
-  background-color: transparent;
-  background-clip: padding-box;
-  border: none;
-  outline: none;
-  //transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-@media only screen and (max-width: 768px) {
-  .sidebar-footer-left input {
-	min-width: 60%;
-  }
-}
-.sidebar-footer-left input:focus{
-  outline: none;
-  border: none;
-  background-color: transparent;
-  color: white;
-}
-.sidebar-footer-left form{
-  height: 44px;
-  max-width: 360px;
-  position: relative;
-  padding-right: 4px;
-  border: 1px solid #3c3c42;
-}
+
+//Footer newsletter
 .newsletter-text{
   color: #606060;
   margin-top: 16px;
 }
-.sidebar-footer-right h6{
-  color: #606060;
+.newsletter-wrap {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
 }
+.newsletter-wrap .newsletter-box {
+  height: 44px;
+  position: relative;
+}
+.newsletter-wrap .input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px 90px 8px 8px;
+  border: 1px solid #3c3c42;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  -webkit-transition: all .8s cubic-bezier(.19,1,.22,1);
+  transition: all .8s cubic-bezier(.19,1,.22,1);
+}
+.newsletter-wrap .input:focus {
+  border: 1px solid #0e5fac;
+}
+.newsletter-wrap .newsletter-btn {
+  display: block;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #37A9D1;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  -webkit-transition: all .8s cubic-bezier(.19,1,.22,1);
+  transition: all .8s cubic-bezier(.19,1,.22,1);
+}
+
+
 //Footer contact
 .footer-contact{
   margin-bottom: 32px;
