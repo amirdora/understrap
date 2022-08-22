@@ -16316,6 +16316,10 @@ ul.menu {
   font-size: 0.9rem;
 }
 
+.has-no-post-message:not(:empty) + .no-post-message {
+  display: none;
+}
+
 @media (min-width: 1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 80%;
@@ -16423,6 +16427,13 @@ ul.menu {
   position: relative;
 }
 
+.products-grid .wp-block-post .wp-block-group {
+  margin-top: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .products-grid .wp-block-post-title {
   padding: 8px 0 8px 16px;
   background-color: white;
@@ -16470,6 +16481,10 @@ ul.menu {
 
 .products-grid .wp-block-post-featured-image {
   margin: 0;
+}
+
+.products-grid .wp-block-post-featured-image img {
+  margin-bottom: 16px;
 }
 
 .products-grid a:hover .wp-block-group__inner-container {
@@ -16562,7 +16577,7 @@ ul.menu {
 }*/
 .site .webinar-grid .wp-block-post-template {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 40px;
 }
 
@@ -16573,6 +16588,7 @@ ul.menu {
   border-radius: 2%;
   position: relative;
   min-height: 460px;
+  max-width: 460px;
 }
 
 .webinar-grid .wp-block-post-content {
@@ -16614,7 +16630,7 @@ ul.menu {
 
 .site .training-grid .wp-block-post-template {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 40px;
 }
 
@@ -16625,6 +16641,7 @@ ul.menu {
   border-radius: 2%;
   position: relative;
   min-height: 460px;
+  max-width: 360px;
 }
 
 .training-grid .wp-block-group {
@@ -17077,7 +17094,7 @@ a:hover {
 }
 
 .responsive-tabs img {
-  max-width: 450px;
+  max-width: 300px;
   max-height: 200px;
 }
 

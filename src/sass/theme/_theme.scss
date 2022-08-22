@@ -291,7 +291,10 @@ ul.menu {
 .footer-contact .contact-url{
   font-size: 0.9rem;
 }
-
+// show/hide no posts found text
+.has-no-post-message:not(:empty) + .no-post-message {
+  display: none;
+}
 //Grid Item Generic
 @media (min-width: 1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -384,6 +387,14 @@ ul.menu {
   max-width: 360px;
   position: relative;
 }
+//align item bottom
+.products-grid .wp-block-post .wp-block-group{
+  margin-top: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+//
 .products-grid .wp-block-post-title{
   padding: 8px 0 8px 16px;
   background-color: white;
@@ -420,6 +431,9 @@ ul.menu {
 }
 .products-grid .wp-block-post-featured-image {
   margin: 0;
+}
+.products-grid .wp-block-post-featured-image img{
+  margin-bottom: 16px;
 }
 .products-grid a:hover .wp-block-group__inner-container{
   background-color: #0e5fac!important;
@@ -494,7 +508,7 @@ ul.menu {
 //Grid Item; Webinar
 .site .webinar-grid .wp-block-post-template {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 40px;
 }
 .webinar-grid .wp-block-post{
@@ -504,6 +518,7 @@ ul.menu {
   border-radius: 2%;
   position: relative;
   min-height: 460px;
+  max-width: 460px;
 }
 .webinar-grid .wp-block-post-content{
   padding-bottom: 64px;
@@ -541,7 +556,7 @@ ul.menu {
 //Grid Item; Training Course
 .site .training-grid .wp-block-post-template {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 40px;
 }
 .training-grid .wp-block-post{
@@ -551,6 +566,7 @@ ul.menu {
   border-radius: 2%;
   position: relative;
   min-height: 460px;
+  max-width: 360px;
 }
 .training-grid .wp-block-group{
   border-top: 1px solid #e8e8e8;
@@ -947,7 +963,7 @@ a:hover {
   margin-bottom: 16px;
 }
 .responsive-tabs img{
-  max-width: 450px;
+  max-width: 300px;
   max-height: 200px;
 }
 @media (max-width: 767px) {
