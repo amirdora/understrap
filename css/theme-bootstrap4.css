@@ -16023,7 +16023,7 @@ body {
 }
 
 #full-width-page-wrapper {
-  background-image: url("http://new.dahuasecurity.de/wp-content/uploads/2022/07/dahua_blue_wave.png");
+  background-image: url("/wp-content/uploads/2022/07/dahua_blue_wave.png");
   background-repeat: repeat;
   background-position: left top;
   min-height: 500px;
