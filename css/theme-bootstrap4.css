@@ -16667,14 +16667,14 @@ ul.menu {
   color: white !important;
 }
 
-.type-webinar .wp-block-columns, .type-training_course .wp-block-columns {
+.wp-block-post-template .type-webinar .wp-block-columns, .wp-block-post-template .type-training_course .wp-block-columns {
   margin: 0;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.type-webinar .wp-block-column, .type-training_course .wp-block-column {
+.wp-block-post-template .type-webinar .wp-block-column, .wp-block-post-template .type-training_course .wp-block-column {
   z-index: 1;
   margin-top: 21px !important;
   padding-bottom: 20px !important;
